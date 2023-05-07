@@ -1,0 +1,156 @@
+/* font-family: 'Staatliches', cursive; */
+:root {
+--primario: #9C27B0;
+--primarioOscuroario: #89119d;
+--secundario: #ffce00;
+--blanco: #fff;
+--negro: #000;
+  
+--fuentePrincipal: 'Staatliches', cursive;
+}
+
+html {
+box-sizing: border-box;
+font-size: 62.5%;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+/*globales*/
+body {
+background-color: var(--primario);
+font-size: 1.6rem;
+line-height: 1.5;
+}
+p {
+font-size: 1.8rem;
+font-family: var(--fuentePrincipal);
+color: var(--blanco);
+}
+
+a { 
+text-decoration: none;
+}
+
+img {
+max-width: 30rem;
+}
+
+h1, h2, h3 {
+text-align: center;
+color: var(--secundario);
+font-family: var(--fuentePrincipal);
+}
+h1 {  font-size: 4rem; }
+h2 { font-size: 3.2rem; }
+h3 { font-size: 2.4rem; }
+
+/*.contenedor {
+max-width: 120rem;
+margin: 0 auto;
+}*/
+
+/*Header*/
+.header {   
+display: flex;
+justify-content: center;
+
+}
+.header__logo {
+margin: 3rem 0;
+}
+/*footer*/
+.footer { 
+background-color: var(--primarioOscuroario);
+padding: 0.5rem 0;
+margin-top: 2rem;
+}
+.footer__text {
+text-align: center;
+font-family: var(--fuentePrincipal);
+font-size: 2.2rem;
+}
+/*.navegador*/
+.navegador {
+background-color: #89119d;
+display: flex;
+justify-content: center;
+gap: 2rem;
+}
+.navegador__enlace {
+color: var(--blanco);
+font-family: var(--fuentePrincipal);
+font-size: 2.2rem;
+}
+.navegador__enlace--activo,
+.navegador__enlace:hover {
+color: var(--secundario);
+}
+/* Main */
+.contenedor, .contenedor__text {
+text-align: center;
+color: var(--secundario);
+font-size: 4rem;
+}
+
+/* Grid*/
+.grid {
+display: grid;
+grid-template-columns: repeat( 2, 1fr);
+gap: 2rem;
+}
+@media (min-width: 768px) {
+
+         .grid { grid-template-columns: repeat( 3, 1fr);
+        
+        }
+}
+
+/* productos */
+.producto {
+background-color: var(--primarioOscuroario);
+padding: 0.5rem;
+
+}
+.producto__img {
+width: 100%;
+}
+.producto__information {
+
+}
+.producto__nombre {
+font-size:  3rem;
+}
+.producto__precio {
+font-size: 2.5rem;
+color: var(--secundario);
+padding: 0.5rem 0;
+}
+.producto__nombre,
+.producto__precio {
+font-family: var(--fuentePrincipal);
+margin: 1rem 0;
+line-height: 1.2rem;
+}
+/*Grafico*/
+.grafico {
+min-height: 30rem;
+}
+.grafico--camisas {
+grid-row: 2 / 3;
+grid-column: 1 / 3;
+}
+.grafico--camisas img { width: 2rem; }
+.grafico--node {
+grid-row: 5 / 6;
+grid-column: 1 / 3;
+background-image: url("");
+}
+@media (min-width: 768px) {
+    .grafico--node {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+
+        }
+}
